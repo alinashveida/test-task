@@ -1,0 +1,224 @@
+.listItem {
+  width: 100%;
+  border: 1px solid rgba(212, 212, 212, 0.8);
+  box-shadow: -1px 1px 4px -1px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+
+  border-bottom: 4px;
+
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.projectName {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+  color: #4b4b4b;
+}
+
+.itemPercentage {
+  display: inline-block;
+
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-right: 13px;
+  // height: 33px;
+  padding: 6px;
+  background-color: #ff503f;
+  border-radius: 10%;
+}
+
+.itemPercentage > span {
+  font-size: 18px;
+}
+
+.messageNotFound {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+  color: #c1c1c1;
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.projectInfo {
+  font-family: 'Freight Sans Pro Semibold';
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+  color: #4b4b4b;
+
+  border: 1px solid rgba(164, 164, 164, 0.52);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+  border-radius: 30%;
+  padding: 7px;
+  margin-right: 7px;
+}
+
+.buttonInfo {
+  width: 34px;
+  height: 34px;
+  background-color: rgba(146, 173, 193, 0);
+  border: 1px solid rgba(164, 164, 164, 0.52);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a6a6a6;
+  margin-left: 7px;
+
+  &:hover,
+  &:focus {
+    background-color: #ff503f;
+    color: white;
+  }
+}
+
+.tasksListItem {
+  width: 100%;
+  border: 1px solid rgba(212, 212, 212, 0.8);
+  box-shadow: -1px 1px 4px -1px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  opacity: 0.9;
+  background-color: #fafafa;
+
+  border-bottom: 4px;
+
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksItemPercentage {
+  display: inline-block;
+
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.51);
+  color: #bebebe;
+
+  font-family: 'Helvetica Neue';
+
+  margin-right: 13px;
+  padding: 6px;
+
+  border-radius: 10%;
+  border: 1px solid rgba(195, 195, 195, 0.52);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+}
+
+.tasksItemPercentage > span {
+  font-size: 18px;
+}
+
+.taskName {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+  color: #4b4b4b;
+}
+
+.projectWrapper,
+.projectInfoWrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.done {
+  display: inline-block;
+
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.51);
+  color: #bebebe;
+
+  margin-right: 13px;
+  padding: 6px;
+
+  border-radius: 10%;
+  border: 1px solid rgba(195, 195, 195, 0.52);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+}
+
+.taskDone {
+  opacity: 0.5;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+  color: #838383;
+  text-decoration: line-through;
+
+  &::after {
+    content: ' ';
+    background-image: url(../../images/checkmarkoutline_110785.svg);
+    width: 16px;
+    height: 13px;
+    display: inline-block;
+    background-size: cover;
+    margin-left: 10px;
+  }
+}
+
+.taskDate {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+  color: #4b4b4b;
+
+  padding: 7px;
+  border: 1px solid rgba(164, 164, 164, 0.52);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+  border-radius: 20%;
+  margin-right: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .listItem,
+  .tasksListItem {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .listItem,
+  .tasksListItem {
+    width: 986px;
+  }
+}

@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+
+  width: 100%;
+  margin: 0 auto;
+  max-width: 320px;
+  padding-left: 19px;
+  padding-right: 19px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    max-width: 768px;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .App {
+    max-width: 986px;
+  }
+}
