@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/test-task/static/css/main.a3e8b4a1.chunk.css",
+    "main.js": "/test-task/static/js/main.2e0b4c1c.chunk.js",
+    "main.js.map": "/test-task/static/js/main.2e0b4c1c.chunk.js.map",
+    "runtime-main.js": "/test-task/static/js/runtime-main.d9d4bff7.js",
+    "runtime-main.js.map": "/test-task/static/js/runtime-main.d9d4bff7.js.map",
+    "static/js/2.1d2e88b1.chunk.js": "/test-task/static/js/2.1d2e88b1.chunk.js",
+    "static/js/2.1d2e88b1.chunk.js.map": "/test-task/static/js/2.1d2e88b1.chunk.js.map",
+    "index.html": "/test-task/index.html",
+    "static/css/main.a3e8b4a1.chunk.css.map": "/test-task/static/css/main.a3e8b4a1.chunk.css.map",
+    "static/js/2.1d2e88b1.chunk.js.LICENSE.txt": "/test-task/static/js/2.1d2e88b1.chunk.js.LICENSE.txt",
+    "static/media/ProjectList.module.scss": "/test-task/static/media/checkmarkoutline_110785.cdbbdaa8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9d4bff7.js",
+    "static/js/2.1d2e88b1.chunk.js",
+    "static/css/main.a3e8b4a1.chunk.css",
+    "static/js/main.2e0b4c1c.chunk.js"
+  ]
+}
