@@ -19,6 +19,7 @@
   &:focus {
     background-color: #ff503f;
     color: white;
+    cursor: pointer;
   }
   &:focus > .icon,
   &:hover > .icon {
