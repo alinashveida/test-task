@@ -4,15 +4,18 @@ import ButtonSearch from '../ButtonSearch/ButtonSearch'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 import PropTypes from 'prop-types'
 
+import RoundedButton from '../RoundedButton/RoundedButton'
+import { AiOutlineSearch } from 'react-icons/ai'
+
 export default function ProjectList({ projectNames }) {
-  const [active, setActive] = useState({})
+  const [active, setActive] = useState(null)
 
   function handleCollapse(id) {
-    setActive({
-      ...active,
-      [id]: !active[id],
-    })
+    setActive(active === id ? null : id)
   }
+
+  const isActive = (id) => active === id
+  const isDone = (percentage) => percentage === 100
 
   const projectNamesLength = projectNames.length
 
@@ -36,22 +39,15 @@ export default function ProjectList({ projectNames }) {
                   <span className={styled.projectInfo}>
                     {project.description}
                   </span>
-                  <ButtonSearch />
-                  <button
-                    className={styled.buttonInfo}
-                    id={project.id}
+                  <RoundedButton icon={AiOutlineSearch} />
+                  <RoundedButton
+                    icon={isActive(project.id) ? BsChevronUp : BsChevronDown}
                     onClick={() => handleCollapse(project.id)}
-                  >
-                    {active[project.id] ? (
-                      <BsChevronUp id={project.id} />
-                    ) : (
-                      <BsChevronDown id={project.id} />
-                    )}
-                  </button>
+                  />
                 </div>
               </div>
               <ul
-                className={active[project.id] ? styled.active : styled.hidden}
+                className={isActive(project.id) ? styled.active : styled.hidden}
               >
                 {' '}
                 {project.tasks.map((task) => (
@@ -59,15 +55,15 @@ export default function ProjectList({ projectNames }) {
                     <div className={styled.projectWrapper}>
                       <span
                         className={
-                          task.percentage === 100
+                          isDone(task.percentage)
                             ? styled.done
                             : styled.tasksItemPercentage
                         }
                       >
-                        {task.percentage === 100 ? 'READY' : task.percentage}
+                        {isDone(task.percentage) ? 'ready' : task.percentage}
                         <span
                           className={
-                            task.percentage === 100 ? styled.hidden : null
+                            isDone(task.percentage) ? styled.hidden : null
                           }
                         >
                           %
@@ -75,7 +71,7 @@ export default function ProjectList({ projectNames }) {
                       </span>
                       <p
                         className={
-                          task.percentage === 100
+                          isDone(task.percentage)
                             ? styled.taskDone
                             : styled.taskName
                         }
@@ -85,7 +81,7 @@ export default function ProjectList({ projectNames }) {
                     </div>
                     <div className={styled.projectInfoWrapper}>
                       <p className={styled.taskDate}>{task.date}</p>
-                      <ButtonSearch />
+                      <RoundedButton icon={AiOutlineSearch} />
                     </div>
                   </li>
                 ))}
